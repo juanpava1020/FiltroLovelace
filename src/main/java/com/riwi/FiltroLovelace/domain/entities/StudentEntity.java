@@ -37,7 +37,7 @@ public class StudentEntity {
     private ClassEntity classId;
 
     @Column(nullable = false)
-    private LocalDateTime createdAd;
+    private LocalDateTime createdAt;
 
     @Column(nullable = false)
     private boolean active;

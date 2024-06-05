@@ -48,6 +48,8 @@ public class LessonEntity {
     @Column(nullable = false)
     private boolean active;
 
+    
+
 
     @OneToMany(
         mappedBy = "lessonId",
