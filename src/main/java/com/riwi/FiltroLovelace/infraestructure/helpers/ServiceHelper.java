@@ -22,6 +22,6 @@ public class ServiceHelper {
 
     public <Entity, ID> Entity find(ID id, JpaRepository<Entity, ID> repository, String name){
         return repository.findById(id)
-        .orElseThrow (() -> new BadIdException(name));
+        .orElseThrow() (() -> new BadIdException(name));
     }
 }

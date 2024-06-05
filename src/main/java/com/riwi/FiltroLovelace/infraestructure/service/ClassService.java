@@ -6,15 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import com.multiclassR.domain.entities.ClassEntity;
+
 import com.riwi.FiltroLovelace.api.dtos.request.ClassRequest;
 import com.riwi.FiltroLovelace.api.dtos.response.ClassResponse;
+import com.riwi.FiltroLovelace.domain.entities.ClassEntity;
 import com.riwi.FiltroLovelace.domain.repositories.ClassRepository;
 import com.riwi.FiltroLovelace.infraestructure.abstract_service.IClassService;
 import com.riwi.FiltroLovelace.infraestructure.helpers.mappers.ClassMapper;
 
 @Service
-public class classService implements IClassService {
+public class ClassService implements IClassService {
    @Autowired
    private ClassRepository classRepository;
    @Autowired
