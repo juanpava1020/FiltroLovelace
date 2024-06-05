@@ -1,4 +1,4 @@
-package com.riwi.FiltroLovelace.utils.mappers;
+package com.riwi.FiltroLovelace.infraestructure.helpers.mappers;
 
 import java.time.LocalDateTime;
 
