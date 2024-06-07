@@ -1,6 +1,8 @@
 package com.riwi.FiltroLovelace.api.dtos.request;
 
 
+import java.time.LocalDateTime;
+
 import jakarta.validation.constraints.Email;
 
 
@@ -25,7 +27,8 @@ public class StudentRequest {
 
   @NotNull(message = "El estado del estudiante no puede ser nula")
   private Boolean active;
-
+  
+  
   @NotNull(message = "El id de la clase no puede ser nulo")
   private Long classId;
 }

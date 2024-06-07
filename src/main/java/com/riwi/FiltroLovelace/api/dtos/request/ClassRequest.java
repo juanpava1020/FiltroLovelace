@@ -23,10 +23,6 @@ public class ClassRequest {
   @NotBlank(message = "La descripción de la clase no puede estar vacía")
   private String description; 
 
-  @FutureOrPresent(message = "La fecha de creación no puede ser anterior a la actual")
-  @NotNull(message = "La fecha de creación no puede estar vacía")
-  private LocalDateTime createdAt;
-
   @NotNull(message = "El estado de la clase no puede ser nula")
   private Boolean active;
   

@@ -36,7 +36,8 @@ public class StudentEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private ClassEntity classId;
 
-    @Column(nullable = false)
+    
+    @Column(name = "created_at" , nullable = false , updatable = false)
     private LocalDateTime createdAt;
 
     @Column(nullable = false)

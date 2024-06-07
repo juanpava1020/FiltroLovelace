@@ -9,6 +9,6 @@ import com.riwi.FiltroLovelace.domain.entities.StudentEntity;
 
 public interface StudentRepository  extends JpaRepository<StudentEntity, Long> {
 
-  Page<StudentEntity> findByNameContainingAndActiveTrue(String name, String description,
+  Page<StudentEntity> findByNameContainingAndActiveTrue(String name, 
       Pageable pageable);
 }

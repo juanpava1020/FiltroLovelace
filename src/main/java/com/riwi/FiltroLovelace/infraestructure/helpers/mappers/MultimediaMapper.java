@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 public class MultimediaMapper {
-  @Autowired
+  
   public MultimediaResponse toResponse(MultimediaEntity entity) {
     return MultimediaResponse.builder()
         .id(entity.getId())

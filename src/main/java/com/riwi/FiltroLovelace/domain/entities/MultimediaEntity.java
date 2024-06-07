@@ -10,6 +10,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -30,7 +31,7 @@ public class MultimediaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false,length = 100)
     private Estado type;
 
     @Column(nullable = false)
@@ -38,6 +39,7 @@ public class MultimediaEntity {
     private String url;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lesson_id", referencedColumnName = "id")
     private LessonEntity lessonId;
 
     @Column(nullable = false)

@@ -23,8 +23,9 @@ public class LessonService implements ILessonService {
   @Override
   public com.riwi.FiltroLovelace.api.dtos.response.LessonResponse saveLesson(LessonRequest request) {
     LessonEntity lesson = lessonMapper.toEntity(request);
-    this.multimediaService.createMultimediaFromLesson(lesson.getId(), request.getMultimedias());
-    return lessonMapper.toResponse(lessonRepository.save(lesson));
+    LessonEntity save = lessonRepository.save(lesson);
+    this.multimediaService.createMultimediaFromLesson(save.getId(), request.getMultimedias());
+    return lessonMapper.toResponse(save);
   }
 
 

@@ -43,9 +43,9 @@ private StudentMapper studentMapper;
   }
 
   @Override
-  public Page<StudentResponse> findByNameOrDescription(String name, String description, Pageable pageable) {
+  public Page<StudentResponse> findByName(String name, Pageable pageable) {
 
-    return this.studentRepository.findByNameContainingAndActiveTrue(name, description, pageable).map(student -> this.studentMapper.toResponse(student));
+    return this.studentRepository.findByNameContainingAndActiveTrue(name, pageable).map(student -> this.studentMapper.toResponse(student));
   }
 
   @Override
